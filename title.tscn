@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://crxlxv8dr1mvd"]
+
+[ext_resource type="Script" uid="uid://bl47ohx5qu38t" path="res://title.gd" id="1_y7k74"]
+
+[node name="title" type="Node2D" unique_id=1273547729]
+script = ExtResource("1_y7k74")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=607227897]
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=35084672]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.5
+offset_top = -175.5
+offset_right = 211.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Scryfall Game"
+horizontal_alignment = 1
+
+[node name="start" type="Button" parent="CanvasLayer/Title" unique_id=177389875]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.25
+offset_top = 98.0
+offset_right = 209.25
+offset_bottom = 265.5
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[connection signal="pressed" from="CanvasLayer/Title/start" to="." method="_on_start_pressed"]
