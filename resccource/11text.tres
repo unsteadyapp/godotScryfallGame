@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://b4um81ufb4jp5"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_7yauf"]
+
+[resource]
+script = ExtResource("1_7yauf")
+cardName = "Swamp"
+cardType = "blajdlfj"
+date = "1997-10-14"

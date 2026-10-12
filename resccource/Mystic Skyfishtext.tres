@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://ytcvejq7b2r6"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_kdc4a"]
+
+[resource]
+script = ExtResource("1_kdc4a")
+cardName = "Mystic Skyfish"
+date = "2020-07-03"

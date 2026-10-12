@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://b48gcqmrl6dme"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_gqmw3"]
+
+[resource]
+script = ExtResource("1_gqmw3")
+cardName = "Vaevictis Asmadi"
+date = "1995-07-01"

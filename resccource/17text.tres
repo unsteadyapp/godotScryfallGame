@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://q2i0bv2t1fo4"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_83d6s"]
+
+[resource]
+script = ExtResource("1_83d6s")
+cardName = "Ragged Playmate"
+cardType = "blajdlfj"
+date = "2024-09-27"

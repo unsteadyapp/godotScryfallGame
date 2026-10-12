@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://doikg21slw3c2"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_e4p6k"]
+
+[resource]
+script = ExtResource("1_e4p6k")
+cardName = "Triskelion"
+date = "2020-03-13"

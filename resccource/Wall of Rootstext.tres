@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://deondre0qcu44"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_o5x1k"]
+
+[resource]
+script = ExtResource("1_o5x1k")
+cardName = "Wall of Roots"
+date = "2008-01-01"

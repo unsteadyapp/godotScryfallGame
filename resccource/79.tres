@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://cw11r07gsqqn8"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_13qos"]
+
+[resource]
+script = ExtResource("1_13qos")
+cardName = "Edric, Spymaster of Trest"
+date = "2014-06-06"

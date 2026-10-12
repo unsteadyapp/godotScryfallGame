@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://b04ocddbv0hrg"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_fwkot"]
+
+[resource]
+script = ExtResource("1_fwkot")
+cardName = "Odric, Master Tactician"
+date = "2020-04-17"

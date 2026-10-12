@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://qsbqokn577vf"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_dfkk5"]
+
+[resource]
+script = ExtResource("1_dfkk5")
+cardName = "Remand"
+date = "2014-03-14"

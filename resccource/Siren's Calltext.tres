@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://clx8pp2ul6bjl"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_a61dh"]
+
+[resource]
+script = ExtResource("1_a61dh")
+cardName = "Siren's Call"
+date = "1993-12-10"

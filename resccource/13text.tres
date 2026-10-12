@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://u3tfgq5d0dw3"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_xpeat"]
+
+[resource]
+script = ExtResource("1_xpeat")
+cardName = "Birds of Paradise"
+cardType = "blajdlfj"
+date = "2021-06-21"

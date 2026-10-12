@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dhr3o4i1pqnf7"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_78faa"]
+
+[resource]
+script = ExtResource("1_78faa")
+cardName = "Forest"

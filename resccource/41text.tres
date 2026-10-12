@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://c0s60pqyk41nf"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_pm5cd"]
+
+[resource]
+script = ExtResource("1_pm5cd")
+cardName = "Altar's Reap"
+cardType = "blajdlfj"
+date = "2019-11-07"

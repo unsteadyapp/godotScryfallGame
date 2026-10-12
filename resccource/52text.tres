@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dunbahkc6jt1j"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_xink0"]
+
+[resource]
+script = ExtResource("1_xink0")
+cardName = "Nocturnal Raid"
+cardType = "blajdlfj"
+date = "1996-10-08"

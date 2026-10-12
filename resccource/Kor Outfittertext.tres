@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://cxywh3ohk1k3s"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_hsdg7"]
+
+[resource]
+script = ExtResource("1_hsdg7")
+cardName = "Kor Outfitter"
+date = "2009-10-02"

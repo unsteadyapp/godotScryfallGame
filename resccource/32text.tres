@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dmchaupre4tlm"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_4jjov"]
+
+[resource]
+script = ExtResource("1_4jjov")
+cardName = "Mortify"
+cardType = "blajdlfj"
+date = "2023-06-23"

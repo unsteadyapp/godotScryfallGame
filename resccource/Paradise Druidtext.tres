@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dmfs8xr8iye1b"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_qex1y"]
+
+[resource]
+script = ExtResource("1_qex1y")
+cardName = "Paradise Druid"
+date = "2023-09-08"

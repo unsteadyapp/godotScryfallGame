@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dc7q14ordypdr"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_7afqe"]
+
+[resource]
+script = ExtResource("1_7afqe")
+cardName = "Balamb Garden, SeeD Academy // Balamb Garden, Airborne"
+cardType = "blajdlfj"
+date = "2025-06-13"

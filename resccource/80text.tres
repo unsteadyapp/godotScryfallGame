@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://ddp2wtayrmu7d"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_wiq4x"]
+
+[resource]
+script = ExtResource("1_wiq4x")
+cardName = "Crossbow Infantry"
+cardType = "blajdlfj"
+date = "2005-07-29"

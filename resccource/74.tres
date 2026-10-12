@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://4k8tlwumkpo7"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_t7umf"]
+
+[resource]
+script = ExtResource("1_t7umf")
+cardName = "Spark Spray"
+date = "2014-06-16"

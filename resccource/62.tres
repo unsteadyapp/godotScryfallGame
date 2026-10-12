@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dulrjjaadsunm"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_qhlps"]
+
+[resource]
+script = ExtResource("1_qhlps")
+cardName = "Gate Smasher"
+date = "2015-03-27"

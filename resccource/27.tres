@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://bi6pw05on3edl"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_dsj5i"]
+
+[resource]
+script = ExtResource("1_dsj5i")
+cardName = "Blood Operative"
+date = "2018-10-05"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://ddak3qnsdbgva"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_smva7"]
+
+[resource]
+script = ExtResource("1_smva7")
+cardName = "Wall of Vipers"
+cardType = "blajdlfj"
+date = "2000-06-05"

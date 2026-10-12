@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://bxgamv3p4il21"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_pnwv5"]
+
+[resource]
+script = ExtResource("1_pnwv5")
+cardName = "Temporal Manipulation"
+date = "2022-12-05"

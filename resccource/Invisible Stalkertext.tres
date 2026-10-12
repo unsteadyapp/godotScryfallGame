@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://bb7o1xw8l2ucl"]
+
+[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_44uel"]
+
+[resource]
+script = ExtResource("1_44uel")
+cardName = "Invisible Stalker"
+date = "2011-09-30"
