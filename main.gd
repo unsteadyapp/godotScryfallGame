@@ -11,8 +11,9 @@ const decodeWay = "random"
 func _ready() -> void:
 	#start_time = Time.get_ticks_msec()
 	$title.start_game.connect(start_game)
-	var metaData := preload("res://metadata.tres")
-	gamedata.nameToPathDict = metaData.nameToFileDict
+	var metaData := preload("res://metadata.res")
+	#gamedata.nameToPathDict = metaData.nameToFileDict
+	gamedata.nameToPathDict = metaData.allcards
 func start_game():
 	for i in get_children():
 		i.queue_free()

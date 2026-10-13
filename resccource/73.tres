@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://dlrmtdagtw8y4"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_u40ml"]
-
-[resource]
-script = ExtResource("1_u40ml")
-cardName = "Lurking Nightstalker"
-date = "1998-06-24"

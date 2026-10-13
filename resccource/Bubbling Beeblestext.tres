@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://bl2e0ftmj8tf2"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_wo2hb"]
-
-[resource]
-script = ExtResource("1_wo2hb")
-cardName = "Bubbling Beebles"
-date = "1999-06-07"

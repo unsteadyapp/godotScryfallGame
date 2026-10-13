@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://14bq6rrf0tl1"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_ipv0g"]
-
-[resource]
-script = ExtResource("1_ipv0g")
-cardName = "Narset, Parter of Veils"
-date = "2022-11-14"

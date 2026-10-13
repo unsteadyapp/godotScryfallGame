@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://ic1htpybxnhj"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_2g5i5"]
-
-[resource]
-script = ExtResource("1_2g5i5")
-cardName = "Selvala's Enforcer"
-cardType = "blajdlfj"
-date = "2014-06-06"

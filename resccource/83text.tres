@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://c03xab23q3knu"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_a6rup"]
-
-[resource]
-script = ExtResource("1_a6rup")
-cardName = "Ulasht, the Hate Seed"
-cardType = "blajdlfj"
-date = "2006-02-03"

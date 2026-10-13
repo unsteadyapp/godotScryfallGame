@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://cisqiael83vg4"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_irj07"]
-
-[resource]
-script = ExtResource("1_irj07")
-cardName = "Ragged Playmate"
-date = "2024-09-27"

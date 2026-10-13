@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://selvr16y1d1r"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_w61gw"]
-
-[resource]
-script = ExtResource("1_w61gw")
-cardName = "Crown of Gondor"
-cardType = "blajdlfj"
-date = "2023-06-23"

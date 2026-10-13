@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://d0phniuwcqq6m"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_0eoj7"]
-
-[resource]
-script = ExtResource("1_0eoj7")
-cardName = "Surge of Brilliance"
-cardType = "blajdlfj"
-date = "2023-10-13"

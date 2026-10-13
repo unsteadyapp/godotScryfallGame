@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://mkt0pdlt3bik"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_uqyam"]
-
-[resource]
-script = ExtResource("1_uqyam")
-cardName = "Archon of the Wild Rose"
-date = "2023-09-08"

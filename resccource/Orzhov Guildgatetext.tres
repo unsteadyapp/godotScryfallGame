@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="cardObject" format=3 uid="uid://csem7yth5cg8o"]
-
-[ext_resource type="Script" uid="uid://d3qyhm5i3buf5" path="res://cardObject.gd" id="1_kniou"]
-
-[resource]
-script = ExtResource("1_kniou")
-cardName = "Orzhov Guildgate"
-date = "2013-02-01"
