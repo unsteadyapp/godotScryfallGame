@@ -59,10 +59,11 @@ func createRescource(IntTojsonParsable):
 				#for i in json_as_dict:
 					#rescource.set(i,json_as_dict[i])
 				rescource.cardName = json_as_dict["name"]
+				rescource.cmc = json_as_dict["cmc"]
 				var upercase:String = json_as_dict["rarity"].to_upper()
 				print(json_as_dict["name"],cardMetadata.Rarity[upercase])
 				var rarityEnum:cardMetadata.Rarity = cardMetadata.Rarity[upercase]
-				if(rarityEnum):
+				if(rarityEnum!=null):
 					rescource.rarity = rarityEnum
 					print(rescource.rarity)
 				else:

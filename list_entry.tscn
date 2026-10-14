@@ -30,6 +30,14 @@ offset_right = 943.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 30
 
+[node name="cmc" type="Label" parent="." unique_id=2058920145]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 687.0
+offset_right = 795.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 30
+
 [node name="rarity" type="ColorRect" parent="." unique_id=950695917]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 0
@@ -45,4 +53,3 @@ offset_left = 5.0
 offset_top = 5.0
 offset_right = 35.0
 offset_bottom = 35.0
-color = Color(0, 0.5216547, 0.5237744, 1)
