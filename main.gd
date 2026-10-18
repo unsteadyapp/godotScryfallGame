@@ -10,12 +10,32 @@ const decodeWay = "random"
 #TODO chunk and read the json to get a list of names, then when you need it load thet specific line
 func _ready() -> void:
 	#start_time = Time.get_ticks_msec()
-	$title.start_game.connect(start_game)
+	instatiateTitle()
 	var metaData := preload("res://metadata.res")
+	#var metaData := preload("res://metadataTest.res")
 	#gamedata.nameToPathDict = metaData.nameToFileDict
 	gamedata.nameToPathDict = metaData.allcards
+func instatiateTitle():
+	for i in get_children():
+		if i != $back:
+			i.queue_free()
+	var title = preload("res://title.tscn").instantiate()
+	title.start_game.connect(start_game)
+	title.cardparameters.connect(cardParameters)
+	add_child(title)
+	move_child(title,1)
+func cardParameters():
+	for i in get_children():
+		if i != $back:
+			i.queue_free()
+	var gameNode = preload("res://card_parameters.tscn").instantiate()
+	add_child(gameNode)
+	move_child(gameNode,1)
 func start_game():
 	for i in get_children():
-		i.queue_free()
-	add_child(preload("res://enchant_worldle_main.tscn").instantiate())
+		if i != $back:
+			i.queue_free()
+	var gameNode = preload("res://enchant_worldle_main.tscn").instantiate()
+	add_child(gameNode)
+	move_child(gameNode,1)
 	

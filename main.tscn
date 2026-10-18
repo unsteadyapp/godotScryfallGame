@@ -7,3 +7,16 @@
 script = ExtResource("1_0xm2m")
 
 [node name="title" parent="." unique_id=1273547729 instance=ExtResource("2_h2yge")]
+
+[node name="back" type="CanvasLayer" parent="." unique_id=1000273489]
+layer = 2
+
+[node name="back" type="Button" parent="back" unique_id=331493522]
+offset_left = 944.0
+offset_top = 500.0
+offset_right = 1128.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 64
+text = "back"
+
+[connection signal="pressed" from="back/back" to="." method="instatiateTitle"]

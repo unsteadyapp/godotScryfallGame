@@ -19,10 +19,10 @@ func allAtOnce():
 	#json_processed.resize(text_array.size())
 	cardMetadataInstance = cardMetadata.new()
 	for _line in range(orignalLength):
-		createRescource(_line)
+		if(createRescource(_line)):
+			return
 		#json_unprocessed.resize(orignalLength-i-1)
 	var valuesOfRescourceDictionary = nameToRescourceDict.values()
-	print(valuesOfRescourceDictionary)
 	var namesInRescourcedictionary = nameToRescourceDict.keys()
 	for i in range(len(valuesOfRescourceDictionary)):
 		cardMetadataInstance.allcards[namesInRescourcedictionary[i]] = valuesOfRescourceDictionary[i]
@@ -34,7 +34,11 @@ func allAtOnce():
 		#else:
 			#print("error")
 	print(Time.get_ticks_msec()-start)
-	const metaDatapath = "res://metadata.res"
+	var metaDatapath
+	if(filepath == "res://tools/testdata2.jsonl"):
+		metaDatapath = "res://metadataTest.res"
+	else:
+		metaDatapath = "res://metadata.res"
 	cardMetadataInstance.take_over_path(metaDatapath)
 	if(ResourceSaver.save(cardMetadataInstance,metaDatapath) == OK):
 		print("disk written")
@@ -49,26 +53,60 @@ func allAtOnce():
 
 func createRescource(IntTojsonParsable):
 	if(text_array[IntTojsonParsable] != ""):
-		var json_as_dict = JSON.parse_string(text_array[IntTojsonParsable])
+		var json_as_dict:Dictionary = JSON.parse_string(text_array[IntTojsonParsable])
 		if json_as_dict:
-			if(json_as_dict["legalities"]["vintage"] != "not_legal" and json_as_dict["legalities"]["vintage"]!="banned"):
+			if(json_as_dict["legalities"]["vintage"] == "legal" or json_as_dict["legalities"]["vintage"]=="restricted"):
 				#json_processed[IntTojsonParsable] = json_as_dict["name"]
 				#TODO get firstprint data
 				#print("saved")
 				var rescource = cardObject.new()
 				#for i in json_as_dict:
-					#rescource.set(i,json_as_dict[i])
+					#rescource.set(i,json_as_dict[i])#
 				rescource.cardName = json_as_dict["name"]
-				rescource.cmc = json_as_dict["cmc"]
-				var upercase:String = json_as_dict["rarity"].to_upper()
-				print(json_as_dict["name"],cardMetadata.Rarity[upercase])
-				var rarityEnum:cardMetadata.Rarity = cardMetadata.Rarity[upercase]
-				if(rarityEnum!=null):
-					rescource.rarity = rarityEnum
-					print(rescource.rarity)
+				if "edhrec_rank" in json_as_dict:
+					rescource.edhrecRank = int(json_as_dict["edhrec_rank"])
+					#print(json_as_dict["edhrec_rank"])
 				else:
-					printerr("error with rarity:"+json_as_dict["rarity"].to_upper())
-				rescource.cardType = json_as_dict["type_line"].split("—")[0]
+					#print(json_as_dict["name"])
+					pass
+				if("cmc" not in json_as_dict):
+					#print("Not sure what happened", json_as_dict)
+					#return true
+					#print(json_as_dict["name"])
+					return
+				else:
+					rescource.cmc = json_as_dict["cmc"]
+					
+				rescource.scryfallLink = json_as_dict["scryfall_uri"]
+				var upercase:String = json_as_dict["rarity"].to_upper()
+				#print(json_as_dict["name"],cardMetadata.Rarity[upercase])
+				var rarityEnum:cardMetadata.Rarity
+				if upercase in cardMetadata.Rarity:
+					rarityEnum = cardMetadata.Rarity[upercase]
+					if(rarityEnum!=null):
+						rescource.rarity = rarityEnum
+					#print(rescource.rarity)
+					else:
+						printerr("error with rarity:"+json_as_dict["rarity"].to_upper(),json_as_dict["name"])
+				else:
+					#print(json_as_dict["name"], upercase)
+					return
+				if "type_line" in json_as_dict:
+					var typeLineArray = json_as_dict["type_line"].split("—")
+					rescource.cardType = typeLineArray[0]
+					if(typeLineArray.size()>1):
+						rescource.subtype = json_as_dict["type_line"].split("—")[1]
+				else:
+					
+					return
+				
+				if "colors" in json_as_dict:
+					for i in json_as_dict["colors"]:
+						rescource.color+=i
+				else:
+					#print(json_as_dict["name"]," didn't have color")
+					return
+				
 				rescource.date = json_as_dict["released_at"]
 				if(json_as_dict["name"] in nameToRescourceDict):
 					if(json_as_dict["released_at"]<nameToRescourceDict[json_as_dict["name"]].date):

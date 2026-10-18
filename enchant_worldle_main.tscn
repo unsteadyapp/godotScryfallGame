@@ -39,7 +39,7 @@ offset_bottom = 600.0
 [node name="cardsScroll" type="ScrollContainer" parent="controlLayers" unique_id=1432856646]
 offset_left = 15.0
 offset_top = 208.0
-offset_right = 1124.0
+offset_right = 1110.0
 offset_bottom = 595.0
 
 [node name="ordering" type="VBoxContainer" parent="controlLayers/cardsScroll" unique_id=958197200]

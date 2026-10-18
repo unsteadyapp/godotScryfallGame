@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://diowx8tukwdgc"]
+
+[ext_resource type="Script" uid="uid://3wb05resxjr6" path="res://card_parameters.gd" id="1_sidlr"]
+
+[node name="Card Parameters" type="Node2D" unique_id=1752226684]
+script = ExtResource("1_sidlr")
+
+[node name="pickers" type="CanvasLayer" parent="." unique_id=1394196916]
+
+[node name="currentrules" type="VBoxContainer" parent="pickers" unique_id=951942786]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="addEquality" type="Button" parent="pickers" unique_id=1790603626]
+offset_left = 635.0
+offset_top = 1.0
+offset_right = 723.0
+offset_bottom = 42.0
+text = "Add"
+
+[node name="greater" type="OptionButton" parent="pickers" unique_id=693180796]
+offset_left = 478.0
+offset_top = 4.0
+offset_right = 529.0
+offset_bottom = 35.0
+item_count = 5
+popup/item_0/text = ">="
+popup/item_0/id = 0
+popup/item_1/text = ">"
+popup/item_1/id = 1
+popup/item_2/text = "<="
+popup/item_2/id = 2
+popup/item_3/text = "<"
+popup/item_3/id = 3
+popup/item_4/text = "="
+popup/item_4/id = 4
+
+[node name="numberORDropdown" type="Control" parent="pickers" unique_id=1566424563]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 549.0
+offset_top = 5.0
+offset_right = 589.0
+offset_bottom = 45.0
+
+[node name="numberInput" type="LineEdit" parent="pickers/numberORDropdown" unique_id=1676972470]
+layout_mode = 0
+offset_right = 68.5
+offset_bottom = 31.0
+
+[node name="rarity" type="OptionButton" parent="pickers/numberORDropdown" unique_id=1835456003]
+visible = false
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 20.0
+
+[node name="whatTochange" type="OptionButton" parent="pickers" unique_id=1003861973]
+offset_left = 252.0
+offset_top = 11.0
+offset_right = 456.0
+offset_bottom = 31.0
+
+[connection signal="pressed" from="pickers/addEquality" to="." method="_on_add_equality_pressed"]
