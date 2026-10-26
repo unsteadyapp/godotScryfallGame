@@ -1,8 +1,8 @@
 @tool
 extends EditorScript
 #var json_processed = []
-var filepath = "res://tools/testdata2.jsonl"
-#var filepath = "res://tools/defaultCards.jsonl"
+#var filepath = "res://tools/testdata2.jsonl"
+var filepath = "res://tools/defaultCards.jsonl"
 var json_unprocessed
 var cardMetadataInstance:cardMetadata
 var re:= RegEx.create_from_string(r"[^\w]")

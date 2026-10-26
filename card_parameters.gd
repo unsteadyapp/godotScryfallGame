@@ -1,6 +1,6 @@
 extends Node2D
 ##maps the user names to internal card values
-const options:Dictionary[String,String]  = {"EDHREC Rank":"not implemented", "Rarity":"rarity", "Date (yyyy-mm-dd)":"date","Color":"color"}
+const options:Dictionary[String,String]  = {"EDHREC Rank":"edhrecRank", "Rarity":"rarity", "Date (yyyy-mm-dd)":"date","Color":"color"}
 
 func _ready() -> void:
 	for i in options:
@@ -25,6 +25,8 @@ func _on_add_equality_pressed() -> void:
 			userInputedValue = cardMetadata.Rarity[toShowText.to_upper()]
 		else:
 			print(toShowText.to_upper(),cardMetadata.Rarity.values())
+	elif options[questionSelected] == "edhrecRank":
+		userInputedValue = float(toShowText)
 	else:
 		userInputedValue = $pickers/numberORDropdown/numberInput.text
 	var comparisionsDone:Array[Callable] = []

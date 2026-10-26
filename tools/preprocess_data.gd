@@ -2,12 +2,16 @@
 extends EditorScript
 var filepath = "res://tools/testdata2.jsonl"
 #var filepath = "res://tools/defaultCards.jsonl"
+var hintpath = "hint.res"
 var cardMetadataInstance:cardMetadata
 var text_array: PackedStringArray 
 var nameToRescourceDict = {}
+var cardHint:metaHint
+#var hintDict:Dictionary[String,String] = {}
 func _run():
 	allAtOnce()
 func allAtOnce():
+	cardHint = metaHint.new()
 	var start = Time.get_ticks_msec()
 	var jsonFile = FileAccess.open(filepath,FileAccess.READ)
 	print(Time.get_ticks_msec()-start)
@@ -22,7 +26,7 @@ func allAtOnce():
 		if(createRescource(_line)):
 			return
 		#json_unprocessed.resize(orignalLength-i-1)
-	var valuesOfRescourceDictionary = nameToRescourceDict.values()
+	var valuesOfRescourceDictionary:Array = nameToRescourceDict.values()
 	var namesInRescourcedictionary = nameToRescourceDict.keys()
 	for i in range(len(valuesOfRescourceDictionary)):
 		cardMetadataInstance.allcards[namesInRescourcedictionary[i]] = valuesOfRescourceDictionary[i]
@@ -40,7 +44,16 @@ func allAtOnce():
 	else:
 		metaDatapath = "res://metadata.res"
 	cardMetadataInstance.take_over_path(metaDatapath)
+	print(otherBroken.slice(0,100))
+	#print(testOfbroken.slice(0,100))
+	#for i in range(100):
+		#print(testOfbroken[i]["scryfall_uri"])
 	if(ResourceSaver.save(cardMetadataInstance,metaDatapath) == OK):
+		print("disk written")
+	else:
+		print("error")
+	cardHint.take_over_path(hintpath)
+	if(ResourceSaver.save(cardHint,hintpath) == OK):
 		print("disk written")
 	else:
 		print("error")
@@ -50,12 +63,18 @@ func allAtOnce():
 		#var json_as_dict = JSON.parse_string(json_unprocessed[IntTojsonParsable])
 		#if json_as_dict:
 			#json_processed[IntTojsonParsable] = json_as_dict["name"]
-
+var testOfbroken = []
+var otherBroken = []
 func createRescource(IntTojsonParsable):
 	if(text_array[IntTojsonParsable] != ""):
 		var json_as_dict:Dictionary = JSON.parse_string(text_array[IntTojsonParsable])
 		if json_as_dict:
 			if(json_as_dict["legalities"]["vintage"] == "legal" or json_as_dict["legalities"]["vintage"]=="restricted"):
+				if("oracle_id" in json_as_dict):
+					cardHint.hint[json_as_dict["oracle_id"]] = json_as_dict["name"]
+				else:
+					#print(json_as_dict["name"], " no oid")
+					return
 				#json_processed[IntTojsonParsable] = json_as_dict["name"]
 				#TODO get firstprint data
 				#print("saved")
@@ -65,10 +84,12 @@ func createRescource(IntTojsonParsable):
 				rescource.cardName = json_as_dict["name"]
 				if "edhrec_rank" in json_as_dict:
 					rescource.edhrecRank = int(json_as_dict["edhrec_rank"])
+					if rescource.edhrecRank == 0:
+						otherBroken.append(json_as_dict["edhrec_rank"])
 					#print(json_as_dict["edhrec_rank"])
 				else:
 					#print(json_as_dict["name"])
-					pass
+					testOfbroken.append(json_as_dict)
 				if("cmc" not in json_as_dict):
 					#print("Not sure what happened", json_as_dict)
 					#return true
@@ -97,9 +118,7 @@ func createRescource(IntTojsonParsable):
 					if(typeLineArray.size()>1):
 						rescource.subtype = json_as_dict["type_line"].split("—")[1]
 				else:
-					
 					return
-				
 				if "colors" in json_as_dict:
 					for i in json_as_dict["colors"]:
 						rescource.color+=i

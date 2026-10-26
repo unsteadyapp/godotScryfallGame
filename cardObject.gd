@@ -16,4 +16,6 @@ class_name cardObject extends Resource
 ##coresponds to "scryfall_uri"
 @export var scryfallLink:String = "" 
 ##edhrec rank, lower means more popular
-@export var edhrecRank:int
+@export var edhrecRank:float = INF
+##why is hi
+@export var tags:Array[String]

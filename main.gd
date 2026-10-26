@@ -15,6 +15,8 @@ func _ready() -> void:
 	#var metaData := preload("res://metadataTest.res")
 	#gamedata.nameToPathDict = metaData.nameToFileDict
 	gamedata.nameToPathDict = metaData.allcards
+	for i in gamedata.nameToPathDict.values().slice(0,100):
+		print(i.edhrecRank)
 func instatiateTitle():
 	for i in get_children():
 		if i != $back:
